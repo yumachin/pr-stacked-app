@@ -17,6 +17,7 @@ export function Header() {
           <a href="#center">Home</a>
           <a href="#docs">Docs</a>
           <a href="#social">Community</a>
+          <a href="#about">About</a>
         </nav>
 
         <div className="header-actions">
