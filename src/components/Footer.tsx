@@ -16,7 +16,7 @@ export function Footer() {
             <span className="footer-title">Vite + React</span>
           </div>
           <p className="footer-tagline">
-            モダンなフロントエンド開発のためのスターターテンプレート
+            モダンなフロントエンド開発のためのテンプレート
           </p>
         </div>
 
