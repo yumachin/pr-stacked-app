@@ -86,7 +86,7 @@ export function Sidebar({ open, onClose }: SidebarProps) {
         </div>
 
         <div className="sidebar-footer">
-          <p>v0.0.0</p>
+          <p>v1.0.0</p>
         </div>
       </aside>
     </>
