@@ -11,7 +11,7 @@
   margin: 0 auto;
   padding: 2rem;
   display: grid;
-  grid-template-columns: 1fr auto auto;
+  grid-template-columns: 1.4fr 1fr 1fr;
   gap: 2rem;
   align-items: start;
 }
@@ -21,12 +21,18 @@
 }
 
 .footer-logo {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 0.5rem;
   font-weight: 600;
   font-size: 1rem;
   margin-bottom: 0.5rem;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.footer-logo:hover {
+  opacity: 0.85;
 }
 
 .footer-logo .logo {
@@ -50,16 +56,32 @@
   max-width: 280px;
 }
 
-.footer-nav,
-.footer-external {
+.footer-heading {
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #71717a;
+  margin: 0 0 0.75rem;
+}
+
+.footer-nav ul,
+.footer-external ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 0.6rem;
   text-align: left;
 }
 
 .footer-nav a,
 .footer-external a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
   color: #a1a1aa;
   text-decoration: none;
   font-size: 0.9rem;
@@ -71,15 +93,40 @@
   color: #ffffff;
 }
 
+.footer-link-icon {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  filter: invert(1) brightness(2);
+}
+
 .footer-bottom {
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   padding: 1rem 2rem;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
 }
 
 .footer-bottom p {
   font-size: 0.8rem;
   color: #71717a;
+  margin: 0;
+}
+
+.footer-back-to-top {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: #a1a1aa;
+  text-decoration: none;
+  font-size: 0.8rem;
+  transition: color 0.2s ease;
+}
+
+.footer-back-to-top:hover {
+  color: #ffffff;
 }
 
 @media (max-width: 768px) {
@@ -103,11 +150,17 @@
     margin: 0 auto;
   }
 
-  .footer-nav,
-  .footer-external {
+  .footer-nav ul,
+  .footer-external ul {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 1rem 1.5rem;
+    gap: 0.75rem 1.25rem;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem 1.5rem;
   }
 }
